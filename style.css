@@ -1,0 +1,39 @@
+.spacing {
+    height: 50px;
+}
+
+.btn {
+    width: 200px;
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 5px lightblue;
+}
+
+.form-control:focus {
+    box-shadow: 1px 1px 5px inset rgba(173, 216, 230, 0.726);
+    border: 1px solid rgb(34, 139, 224);
+}
+
+#correct-stats, #incorrect-stats {
+    display: inline;
+}
+
+#correct-label, #correct-stats {
+    color: lightgreen;
+}
+
+#incorrect-label, #incorrect-stats {
+    color: red;
+}
+
+#q-char {
+    font-size: 6em;
+    padding-top: 60px;
+    height: 250px;
+    border: 1px dashed rgba(187, 187, 187, 0.856);
+}
+
+#reveal-answer:hover {
+    cursor: pointer;
+}
