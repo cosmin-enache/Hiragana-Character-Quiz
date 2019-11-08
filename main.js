@@ -2,6 +2,12 @@
 let choice = 'Group All';
 
 window.onload = function () {
+    // Remove guide image after an answer is submitted
+    if (sessionStorage.getItem('answerSubmitted') == 1) $('.guide-img').remove();
+
+    // Removes guide image below a certain window width
+    if ($(window).width() < 1100) $('.guide-img').remove();
+    
     // Selecting the chosen character group
     let chosenGroup = groups[choice];
 
@@ -37,6 +43,9 @@ function SubmitAnswer(correctAnswer, correctPoints, incorrectPoints) {
         // Skip the character if the input is empty
         if (userAnswer === '') return;
 
+        // If guide is not closed, close it
+        sessionStorage.setItem('answerSubmitted', 1);
+
         // Comparing user answer to actual answer and displaying a result
         // Storing new point values
         if (userAnswer === correctAnswer)
@@ -49,7 +58,7 @@ function SubmitAnswer(correctAnswer, correctPoints, incorrectPoints) {
             message = `Incorrect! The correct answer is: ${correctAnswer}`;
             sessionStorage.setItem('incorrectPoints', incorrectPoints + 1);
         }
-
+        
         alert(message);
     });
 }

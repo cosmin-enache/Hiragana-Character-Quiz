@@ -15,6 +15,17 @@
     border: 1px solid rgb(34, 139, 224);
 }
 
+.guide-img {
+    position: absolute;
+    top: 0;
+    left: -5vw;
+    margin: 0;
+    width: 91vw;
+    height: 174%;
+    z-index: 1;
+    pointer-events: none;
+}
+
 #correct-stats, #incorrect-stats {
     display: inline;
 }
@@ -25,6 +36,11 @@
 
 #incorrect-label, #incorrect-stats {
     color: red;
+}
+
+#correct-label, #incorrect-label {
+    margin-left: 2vw;
+    font-size: 2em;
 }
 
 #q-char {
